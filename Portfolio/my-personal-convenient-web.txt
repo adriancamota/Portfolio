@@ -1,0 +1,490 @@
+/*Source Code*/
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Organizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="title-container">
+        <h1 class="title">My Personal Convenient Web</h1>
+    </header>
+    <main>
+        <section class="card-container">
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-face front">
+                        <img src="front.png" alt="Front ID Image">
+                    </div>
+                    <div class="card-face back">
+                        <img src="back.png" alt="Back ID Image">
+                    </div>
+                </div>
+            </div>
+            <div class="button-container">
+                <label for="modalToggle1" class="cor-button">
+                    View ID
+                </label>
+                <label for="modalToggle2" class="cor-button">
+                    View COR
+                </label>
+            </div>
+        </section>
+
+        <section class="schedule-wrapper">
+            <div class="schedule-title">
+                <h1>Class Schedule</h1>
+            </div>
+            <table class="schedule-table">
+                <caption>Weekly Class Schedule</caption>
+                <thead>
+                    <tr>
+                        <th class="time-column" scope="col">Time</th>
+                        <th scope="col">Monday</th>
+                        <th scope="col">Tuesday</th>
+                        <th scope="col">Wednesday</th>
+                        <th scope="col">Thursday</th>
+                        <th scope="col">Friday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>07:00 AM</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <div class="class-name">IT 312 - SIA</div>
+                            <div class="class-time">07:00 AM - 10:00 AM</div>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>08:00 AM</td>
+                        <td>
+                            <div class="class-name">BAT 402 - FAM</div>
+                            <div class="class-time">08:00 AM - 10:00 AM</div>
+                        </td>
+                        <td>
+                            <div class="class-name">BAT 401 - FBA</div>
+                            <div class="class-time">08:00 AM - 10:00 AM</div>
+                        </td>
+                        <td>
+                            <div class="class-name">IT 311 - SAM</div>
+                            <div class="class-time">08:00 AM - 10:00 AM</div>
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>10:00 AM</td>
+                        <td>
+                            <div class="class-name">BAT 402 - FAM</div>
+                            <div class="class-time">10:00 AM - 01:00 PM</div>
+                        </td>
+                        <td>
+                            <div class="class-name">BAT 401 - FBA</div>
+                            <div class="class-time">10:00 AM - 01:00 PM</div>
+                        </td>
+                        <td>
+                            <div class="class-name">IT 311 - SAM</div>
+                            <div class="class-time">10:00 AM - 01:00 PM</div>
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>02:00 PM</td>
+                        <td>
+                            <div class="class-name">IT 313 - SAD</div>
+                            <div class="class-time">02:00 PM - 04:00 PM</div>
+                        </td>
+                        <td>
+                            <div class="class-name">IT 312 - SIA</div>
+                            <div class="class-time">02:00 PM - 04:00 PM</div>
+                        </td>
+                        <td>
+                            <div class="class-name">IT 314 - WST</div>
+                            <div class="class-time">02:00 PM - 04:00 PM</div>
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>04:00 PM</td>
+                        <td>
+                            <div class="class-name">IT 313 - SAD</div>
+                            <div class="class-time">04:00 PM - 07:00 PM</div>
+                        </td>
+                        <td>
+                            <div class="class-name">GEd 107 - Ethics</div>
+                            <div class="class-time">04:00 PM - 07:00 PM</div>
+                        </td>
+                        <td>
+                            <div class="class-name">IT 314 - WST</div>
+                            <div class="class-time">04:00 PM - 07:00 PM</div>
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <input type="checkbox" id="modalToggle1">
+    <div class="modal">
+        <div class="modal-content">
+            <label class="close" for="modalToggle1">&times;</label>
+            <embed src="ID.pdf" type="application/pdf" />
+        </div>
+    </div>
+
+    <input type="checkbox" id="modalToggle2">
+    <div class="modal">
+        <div class="modal-content">
+            <label class="close" for="modalToggle2">&times;</label>
+            <embed src="cor.pdf" type="application/pdf" />
+        </div>
+    </div>
+</body>
+</html>
+
+
+/*CSS*/
+
+/* Basic styling for the page */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f9f4f1 50%, #fef7f3 50%);
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow-x: hidden; /* Ensure no horizontal overflow */
+}
+
+/* Add abstract shapes or patterns */
+body::before, body::after {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: #f7e6d4;
+    border-radius: 50%;
+    z-index: 1;
+    opacity: 0.5;
+}
+
+body::before {
+    top: -100px;
+    left: -100px;
+    background: radial-gradient(circle at top left, #fdf2eb, #f7e6d4);
+}
+
+body::after {
+    bottom: -100px;
+    right: -150px;
+    background: radial-gradient(circle at bottom right, #fdf2eb, #f7e6d4);
+}
+
+/* Front Section Styling */
+.title-container {
+    background-color: transparent;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.title {
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    color: #a27056;
+    margin: 0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 2.5%;
+}
+
+/* Card Section Styling */
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px 0;
+    z-index: 2;
+    position: relative;
+}
+
+.card {
+    width: 320px; /* Portrait size */
+    height: 410px; /* Portrait size */
+    perspective: 1000px; /* Provides depth */
+    margin-top: 2.5%;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d; /* Ensures child elements are positioned in 3D space */
+}
+
+.card-face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden; /* Hide the back side when facing away */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.card .front {
+    transform: rotateY(0deg); /* Front side */
+}
+
+.card .back {
+    transform: rotateY(180deg); /* Back side hidden initially */
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg); /* Rotate inner card to show the back */
+}
+
+.card img {
+    max-width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    margin-top: -100px;
+}
+
+/* Button Container Styling */
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* COR Button Styling */
+.cor-button {
+    outline: none;
+    color: #DAA06D;
+    padding: 1em;
+    padding-left: 3em;
+    padding-right: 3em;
+    border: 2px dashed #DAA06D;
+    border-radius: 15px;
+    background-color: #EADDCA;
+    box-shadow: 0 0 0 4px #EADDCA, 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
+    transition: .1s ease-in-out;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 20px; /* Space between buttons */
+}
+
+.cor-button:hover {
+    background-color: #DAA06D;
+    color: #fff;
+    border-color: #DAA06D;
+}
+
+/* Remove the right margin from the last button */
+.button-container .cor-button:last-child {
+    margin-right: 0;
+}
+
+/* Schedule Table Styling */
+.schedule-wrapper {
+    width: 80%;
+    max-width: 1000px;
+    margin: 30px auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Title styling */
+.schedule-title h1 {
+    font-family: 'Georgia', serif;
+    font-size: 2rem;
+    color: #a27056;
+    text-align: left;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Table styling */
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fdf2eb;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.schedule-table thead {
+    background-color: #fdf2eb;
+    font-size: 1.1rem;
+    color: #8b6c5a;
+}
+
+.schedule-table th, 
+.schedule-table td {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.schedule-table th {
+    font-weight: bold;
+}
+
+/* Time column specific styling */
+.time-column {
+    background-color: #f3e6db;
+    color: #8b6c5a;
+    font-weight: bold;
+}
+
+/* Styling for class name and time inside each cell */
+.class-name {
+    font-weight: bold;
+    color: #70594e;
+}
+
+.class-time {
+    font-size: 0.9rem;
+    color: #8b6c5a;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .title-container {
+        padding: 15px;
+    }
+    
+    .title {
+        font-size: 1.5rem;
+    }
+    
+    .card {
+        width: 90%;
+        height: auto; /* Adjust height for better fit */
+    }
+    
+    .cor-button {
+        padding: 0.8em;
+        font-size: 1.2rem; /* Larger font size for better touch targets */
+        margin: 10px 0; /* Stack buttons vertically */
+    }
+    
+    .button-container {
+        flex-direction: column;
+    }
+    
+    .schedule-wrapper {
+        width: 95%;
+        padding: 15px;
+    }
+    
+    .schedule-title h1 {
+        font-size: 1.5rem;
+    }
+    
+    .schedule-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    .schedule-table thead, 
+    .schedule-table tbody, 
+    .schedule-table th, 
+    .schedule-table td {
+        display: block;
+    }
+    
+    .schedule-table th, 
+    .schedule-table td {
+        text-align: left;
+    }
+    
+    .schedule-table td {
+        border: none;
+    }
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.7); /* Black background with opacity */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 800px;
+    position: relative;
+    height: 80%;
+    max-height: 90%;
+}
+
+.modal-content embed {
+    width: 100%;
+    height: 100%;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Checkbox to control modal visibility */
+#modalToggle1,
+#modalToggle2 {
+    display: none;
+}
+
+#modalToggle1:checked + .modal,
+#modalToggle2:checked + .modal {
+    display: flex; /* Show modal */
+}
+

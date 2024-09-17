@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio Website</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Adrian</a>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox">
+        <label for="menu-toggle" class="menu-toggle">
+            <i class="fa fa-bars"></i>
+        </label>
+        <nav id="navbar" class="nav">
+            <a href="#">Home</a>
+            <a href="#about-me">About Me</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="home">
+        <div class="home-img">
+            <img src="main.jpg" alt="">
+        </div>
+        <div class="home-content">
+            <h2>Hi, It's <span class="highlight">Adrian Camota</span></h2>
+            <h3>And I'm a <span class="highlight">Business Analytics Major</span></h3>
+            <p>I'm Adrian L. Camota, a 3rd-year Business Analytics major at Batangas State University Lipa Campus, passionate about leveraging data to drive business insights and strategies.</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/adrian-camota-3247b9306/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/adriancamota" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.facebook.com/adrian.camota.5" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/adi_woooow/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <a href="#contact" class="btn">Hire me</a>
+        </div>
+    </section>
+
+    <section id="about-me" class="about-me">
+        <div class="about-me-content">
+            <div class="profile-img">
+                <img src="main.jpg" alt="Profile Picture">
+            </div>
+            <h2>About <span class="highlight">Me</span></h2>
+            <p>Hello! I'm Adrian L. Camota, a dedicated <span class="highlight">Business Analytics major</span> at Batangas State University Lipa Campus. My passion lies in transforming data into actionable insights and innovative strategies. With hands-on experience in <span class="highlight">C++, C#, Java, SQL, pgadmin, HTML</span>, and a <span class="highlight">solid foundation in business principles</span>, I'm excited to leverage my skills in real-world scenarios. Outside of academics, I enjoy exploring new technologies, engaging in creative problem-solving, and continuously expanding my knowledge base.</p>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <div class="portfolio-content">
+            <h2>My <span class="highlight">Portfolio</span></h2>
+            <div class="portfolio-items">
+                <div class="portfolio-item">
+                    <a href="#surveyModal">
+                        <img src="main2.png" alt="Project 1">
+                    </a>
+                    <div class="portfolio-item-description">
+                        <h3>freeCodeCamp Survey Form</h3>
+                        <p class="portfolio-description">A survey form that asks you questions and information regarding freeCodeCamp to help their platform improve.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <a href="my-personal-convenient-web.txt" target="_blank">
+                        <img src="main3.png" alt="Project 2">
+                    </a>
+                    <div class="portfolio-item-description">
+                        <h3>My Personal Convenient Web</h3>
+                        <p>This is where I check my schedule and print my ID and Certificate of Registration for my educational assistance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="contact-content">
+            <h2>Get in <span class="highlight">Touch</span></h2>
+            <form action="/submit-form" method="post" class="contact-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fa fa-envelope"></i>
+                    <span>adriancamota@gmail.com</span>
+                    <i class="fa fa-phone"></i>
+                    <span>(63+) 9694567809</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="surveyModal" class="modal">
+        <div class="modal-content">
+            <h4>freeCodeCamp Survey Form</h4>
+            <p>Thank you for taking the time to help us improve the platform</p>
+    
+            <form action="/submit-survey" method="post">
+                <fieldset>
+                    <label for="modal-name">Name</label>
+                    <input type="text" id="modal-name" name="name" placeholder="Enter your name" required>
+    
+                    <label for="modal-email">Email</label>
+                    <input type="text" id="modal-email" name="email" placeholder="Enter your email" required>
+    
+                    <label for="modal-age">Age (optional)</label>
+                    <input type="number" id="modal-age" name="age" placeholder="Enter your age">
+    
+                    <label for="modal-role">Which option best describes your current role?</label>
+                    <select id="modal-role" name="role" required>
+                        <option value="" disabled selected>Select current role</option>
+                        <option value="student">Student</option>
+                        <option value="job">Full-time job</option>
+                        <option value="freelancer">Freelancer</option>
+                        <option value="other">Other</option>
+                    </select>
+    
+                    <label for="modal-feature">What's your favorite feature in freeCodeCamp?</label>
+                    <select id="modal-feature" name="feature" required>
+                        <option value="" disabled selected>Select favorite feature</option>
+                        <option value="user friendly">User friendly</option>
+                        <option value="innovative">Innovative</option>
+                        <option value="other">Other</option>
+                    </select>
+    
+                    <label>Would you recommend freeCodeCamp to a friend?</label>
+                    <label><input type="radio" class="radio" name="recommend" value="Definitely" required>Definitely</label>
+                    <label><input type="radio" class="radio" name="recommend" value="Maybe">Maybe</label>
+                    <label><input type="radio" class="radio" name="recommend" value="Not Sure">Not sure</label>
+    
+                    <label>What would you like to see improved? (Check all that apply)</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" id="modal-frontend" name="improvements" value="frontend"> Frontend</label>
+                        <label><input type="checkbox" id="modal-backend" name="improvements" value="backend"> Backend</label>
+                        <label><input type="checkbox" id="modal-datavisualization" name="improvements" value="datavisualization"> Data Visualization</label>
+                        <label><input type="checkbox" id="modal-challenges" name="improvements" value="challenges"> Challenges</label>
+                        <label><input type="checkbox" id="modal-opensource" name="improvements" value="OpenSource"> Open Source Community</label>
+                        <label><input type="checkbox" id="modal-gitter" name="improvements" value="gitter"> Gitter Help Rooms</label>
+                        <label><input type="checkbox" id="modal-videos" name="improvements" value="videos"> Videos</label>
+                        <label><input type="checkbox" id="modal-citymeetups" name="improvements" value="citymeetups"> City Meetups</label>
+                        <label><input type="checkbox" id="modal-wiki" name="improvements" value="Wiki"> Wiki</label>
+                        <label><input type="checkbox" id="modal-forum" name="improvements" value="Forum"> Forum</label>
+                        <label><input type="checkbox" id="modal-courses" name="improvements" value="Courses"> Additional Courses</label>
+                    </div>
+    
+                    <label for="modal-comment">Any Comment or Suggestions?</label>
+                    <textarea id="modal-comment" name="comment" placeholder="Enter your comment here..."></textarea>
+    
+                    <input type="submit" value="Submit" class="survey-submit">
+                </fieldset>
+            </form>
+    
+            <!-- Copyright Notice -->
+            <p>&copy; August 2024 & September 2024</p>
+        </div>
+    </div>
+    
+</body>
+</html>
