@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Organizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="title-container">
+        <h1 class="title">My Personal Convenient Web</h1>
+    </header>
+    <main>
+        <section class="card-container">
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-face front">
+                        <img src="front.png" alt="Front ID Image">
+                    </div>
+                    <div class="card-face back">
+                        <img src="back.png" alt="Back ID Image">
+                    </div>
+                </div>
+            </div>
+            <div class="button-container">
+                <label for="modalToggle1" class="cor-button">
+                    View ID
+                </label>
+                <label for="modalToggle2" class="cor-button">
+                    View COR
+                </label>
+            </div>
+        </section>
+
+        <section class="schedule-wrapper">
+            <div class="schedule-title">
+                <h1>Class Schedule</h1>
+            </div>
+            <table class="schedule-table">
+                <caption>Weekly Class Schedule</caption>
+                <thead>
+                    <tr>
+                        <th class="time-column" scope="col">Time</th>
+                        <th scope="col">Monday</th>
+                        <th scope="col">Tuesday</th>
+                        <th scope="col">Wednesday</th>
+                        <th scope="col">Thursday</th>
+                        <th scope="col">Friday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>07:00 AM</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <div class="class-name">IT 312 - SIA</div>
+                            <div class="class-time">07:00 AM - 10:00 AM</div>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>08:00 AM</td>
+                        <td>
+                            <div class="class-name">BAT 402 - FAM</div>
+                            <div class="class-time">08:00 AM - 10:00 AM</div>
+                        </td>
+                        <td>
+                            <div class="class-name">BAT 401 - FBA</div>
+                            <div class="class-time">08:00 AM - 10:00 AM</div>
+                        </td>
+                        <td>
+                            <div class="class-name">IT 311 - SAM</div>
+                            <div class="class-time">08:00 AM - 10:00 AM</div>
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>10:00 AM</td>
+                        <td>
+                            <div class="class-name">BAT 402 - FAM</div>
+                            <div class="class-time">10:00 AM - 01:00 PM</div>
+                        </td>
+                        <td>
+                            <div class="class-name">BAT 401 - FBA</div>
+                            <div class="class-time">10:00 AM - 01:00 PM</div>
+                        </td>
+                        <td>
+                            <div class="class-name">IT 311 - SAM</div>
+                            <div class="class-time">10:00 AM - 01:00 PM</div>
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>02:00 PM</td>
+                        <td>
+                            <div class="class-name">IT 313 - SAD</div>
+                            <div class="class-time">02:00 PM - 04:00 PM</div>
+                        </td>
+                        <td>
+                            <div class="class-name">IT 312 - SIA</div>
+                            <div class="class-time">02:00 PM - 04:00 PM</div>
+                        </td>
+                        <td>
+                            <div class="class-name">IT 314 - WST</div>
+                            <div class="class-time">02:00 PM - 04:00 PM</div>
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>04:00 PM</td>
+                        <td>
+                            <div class="class-name">IT 313 - SAD</div>
+                            <div class="class-time">04:00 PM - 07:00 PM</div>
+                        </td>
+                        <td>
+                            <div class="class-name">GEd 107 - Ethics</div>
+                            <div class="class-time">04:00 PM - 07:00 PM</div>
+                        </td>
+                        <td>
+                            <div class="class-name">IT 314 - WST</div>
+                            <div class="class-time">04:00 PM - 07:00 PM</div>
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <input type="checkbox" id="modalToggle1">
+    <div class="modal">
+        <div class="modal-content">
+            <label class="close" for="modalToggle1">&times;</label>
+            <embed src="ID.pdf" type="application/pdf" />
+        </div>
+    </div>
+
+    <input type="checkbox" id="modalToggle2">
+    <div class="modal">
+        <div class="modal-content">
+            <label class="close" for="modalToggle2">&times;</label>
+            <embed src="cor.pdf" type="application/pdf" />
+        </div>
+    </div>
+</body>
+</html>
